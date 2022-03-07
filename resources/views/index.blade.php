@@ -35,9 +35,9 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Country</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>photo</th>
                 <th>View</th>
                 <th>Edit</th>
                 <th>Delete</th>
