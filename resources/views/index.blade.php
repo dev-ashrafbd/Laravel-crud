@@ -25,9 +25,9 @@
     <div class="alert alert-success" role="alert">
         {{ Session::get('Id_update')}}
     </div>
-    @elseif (Session::has('employee_deleted'))
+    @elseif (Session::has('Id_deleted'))
     <div class="alert alert-success" role="alert">
-        {{ Session::get('employee_deleted')}}
+        {{ Session::get('Id_deleted')}}
     </div>
     @endif
     <table class="table table-striped table-bordered" style="width:100%;background-color:white;">
