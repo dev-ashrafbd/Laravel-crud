@@ -5,7 +5,7 @@
         <h1>All Id card</h1>
     </div>
   
-    {{-- <div class="row clearfix">
+    <div class="row clearfix">
                 
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="info-box bg-light-green hover-expand-effect">
@@ -70,7 +70,7 @@
 	
     {{ $Id->links() }}
     
-         --}}
+        
 	
 </div>
 @endsection

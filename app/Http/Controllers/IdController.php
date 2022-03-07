@@ -15,8 +15,8 @@ class IdController extends Controller
      */
     public function index()
     {
-        // $Id = Id::paginate(8);
-        return view('index');
+        $Id = Id::paginate(8);
+        return view('index',compact('Id'));
     }
 
     /**
