@@ -9,5 +9,5 @@ class Id extends Model
 {
     use HasFactory;
 
-    protected $table ="Ids";
+    protected $table ="ids";
 }
