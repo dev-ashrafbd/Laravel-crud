@@ -46,7 +46,7 @@ class IdController extends Controller
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
             $filename = time().'.'.$extension;
-            $file->move('images/id', $filename);
+            $file-> move(public_path('images/id'), $filename);
             $Id->picture =$filename;
         }
         $Id->save();
@@ -99,7 +99,7 @@ class IdController extends Controller
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
             $filename = time().'.'.$extension;
-            $file->move('images/id/', $filename);
+            $file-> move(public_path('images/id'), $filename);
             $Id->picture =$filename;
         }
         $Id->update();
