@@ -55,7 +55,7 @@
                 <td>{{$iteam->name}}</td>
                 <td>{{$iteam->phone}}</td>
                 <td>{{$iteam->email}}</td>
-                <td><img src="{{ asset('storage/images/id/'.$iteam->picture)}}" width="50px" height="50px" ></td>
+                <td><img src="{{ secure_asset('storage/images/id/'.$iteam->picture)}}" width="50px" height="50px" ></td>
                 <td><a href="/show/{{$iteam->id}}" class="btn btn-success" type="submit">view</a></td> 
                 <td><a href="/edit/{{$iteam->id}}" class="btn btn-primary" type="submit">Edit</a></td> 
                 <td><a href="/delete/{{ $iteam->id }}" class="btn btn-primary" type="submit">delete</a></td> 
