@@ -2,9 +2,8 @@
 
 namespace App\Providers;
 
-use Illuminate\Pagination\Paginator;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,11 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        If (env('APP_ENV') !== 'local') {
-            $this->app['request']->server->set('HTTPS', true);
-        }
-
-        Schema::defaultStringLength(191);
+        //
     }
 
     /**

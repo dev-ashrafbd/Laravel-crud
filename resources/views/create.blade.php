@@ -15,13 +15,7 @@
      <a href="{{route('index') }}"> <button class="a-btn--filled">All Id card show</button></a>
       
     </div>
-
-    @if (Session::has('Id_add'))
-    <div class="alert alert-success" role="alert">
-        {{ Session::get('Id_add')}}
-    </div>
-    @endif
-    <form action="{{route('store') }}" method="POST" enctype="multipart/form-data">
+       <form action="{{route('store') }}" method="POST" enctype="multipart/form-data">
       @csrf
       <h1>Create Your ID Card</h1>
 

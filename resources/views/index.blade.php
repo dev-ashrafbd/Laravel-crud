@@ -25,42 +25,40 @@
     <div class="alert alert-success" role="alert">
         {{ Session::get('Id_update')}}
     </div>
-    @elseif (Session::has('Id_deleted'))
+    @elseif (Session::has('employee_deleted'))
     <div class="alert alert-success" role="alert">
-        {{ Session::get('Id_deleted')}}
+        {{ Session::get('employee_deleted')}}
     </div>
-    @endif
+    @elseif (Session::has('Id_add'))
+    <div class="alert alert-success" role="alert">
+        {{ Session::get('Id_add')}}
+    </div>
+       @endif
     <table class="table table-striped table-bordered" style="width:100%;background-color:white;">
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>photo</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Country</th>
                 <th>View</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
         </thead>
         <tbody> 
-           @php
-            $count = 0;
-           @endphp
-            @foreach ($Id as $iteam)
-  @php
-    $count = $count + 1;
+            
+          @foreach ($Id as $key=>$iteam)
 
-
-@endphp
-                <td>{{ $count }}  </td>
+                <td>{{ $key+1 }}  </td>
                 <td>{{$iteam->name}}</td>
                 <td>{{$iteam->phone}}</td>
                 <td>{{$iteam->email}}</td>
-                <td><img src="{{ asset('images/id/'.$iteam->picture)}}" width="50px" height="50px" ></td>
+                <td><img src="{{ asset('storage/images/id/'.$iteam->picture)}}" width="50px" height="50px" ></td>
                 <td><a href="/show/{{$iteam->id}}" class="btn btn-success" type="submit">view</a></td> 
                 <td><a href="/edit/{{$iteam->id}}" class="btn btn-primary" type="submit">Edit</a></td> 
-                <td><a href="/delete/{{ $iteam->id }}" class="btn btn-danger" type="submit">delete</a></td> 
+                <td><a href="/delete/{{ $iteam->id }}" class="btn btn-primary" type="submit">delete</a></td> 
             </tr>
             @endforeach
            

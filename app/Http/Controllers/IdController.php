@@ -46,12 +46,12 @@ class IdController extends Controller
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
             $filename = time().'.'.$extension;
-            $file-> move(public_path('images/id'), $filename);
+            $file->storeAs('public/images/id',$filename);;
             $Id->picture =$filename;
         }
         $Id->save();
 
-        return back()->with('Id_add','Id Add Succesfully');
+        return redirect()->route('index')->with('Id_add','Id Add Succesfully');
     }
 
     /**
@@ -92,14 +92,14 @@ class IdController extends Controller
         $Id->phone = $request->phone;
         $Id->email = $request->email;
         if ($request->hasfile('image')) {
-            $destination ='images/id/'. $Id->picture;
+            $destination ='storage/images/id/'. $Id->picture;
             if (File::exists($destination)) {
                 File::delete($destination);
             }
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
             $filename = time().'.'.$extension;
-            $file-> move(public_path('images/id'), $filename);
+            $file->storeAs('public/images/id',$filename);;
             $Id->picture =$filename;
         }
         $Id->update();

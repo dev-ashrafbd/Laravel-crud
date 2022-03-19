@@ -43,7 +43,7 @@
       <div class="form-field">
         <label for="ProfilePic" class="label--required">Picture </label>
         
-          <img src="{{ asset('images/id/'.$Id->picture)}}" width="150px" height="150px" >
+          <img src="{{ asset('storage/images/id/'.$Id->picture)}}" width="150px" height="150px" >
         
       </div>
 
