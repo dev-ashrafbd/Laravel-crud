@@ -13,6 +13,7 @@ use App\Http\Controllers\IdController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/demo',[IdController::class,'index'])->name('index');
 
 Route::get('/',[IdController::class,'index'])->name('index');
 Route::get('/create',[IdController::class,'create'])->name('create');
